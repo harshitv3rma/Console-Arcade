@@ -1,8 +1,8 @@
 # **Problem Statement** 
 
-The objective of our project is to implement a multi level console game where a single player must cross exactly five different challenges the core difficulty lies in managing to pass them within certain limits on health and stamina across the entire gameplay without breaking the architectural integrity and strictly adherent to object-oriented programming (OOP) principles.There is a need for application that challenges developer to combine distinct algorithm logic into single cohesive user experience while maintaining software design 
+The objective of our project is to implement a multi level console game where a single player must cross exactly five different challenges the core difficulty lies in managing to pass them within certain limits on health and stamina across the entire gameplay without breaking the architectural integrity and strictly adherent to object-oriented programming (OOP) principles.There is a need for application that challenges developer to combine distinct algorithm logic into single cohesive user experience while maintaining software design.
 
-Our proposed environment delivers an integrated **5-level adventure game** . Players navigate sequential challenges with a shared health pool: 
+Our proposed environment delivers an integrated **5-level adventure game** . Players navigate sequential challenges with a shared health pool : 
 
 **Level 1: Riddle Challenge** : Evaluates verbal problem-solving via single-word answers The user will need to answer the riddle as asked. Correct answers would clear the level.. 
 
@@ -10,7 +10,7 @@ Our proposed environment delivers an integrated **5-level adventure game** . Pla
 
 **Level 3: Snake Game** : Tests physical reaction speeds by requiring the collection of 10 food items. 
 
-**Level 4 Card Battle:** Demands tactical decision-making in a 1 card power battle against a bot where both of them receive certain move sets and it's up to the player to decisively select moves for winning the game **.For example** ; The game would be turn based the moves of the enemy card would be fixed( like x number of moves) but the order would be random depending to the other stats, same for the user the number of moves will be fixed but the choice will be decided by the user to defeat the enemy. 
+**Level 4 Card Battle:** Demands tactical decision-making in a 1 card power battle against a bot where both of them receive certain move sets and it's up to the player to decisively select moves for winning the game**. For example** : The game would be turn based, the moves of the enemy card would be fixed (like x number of moves) but the order would be random depending to the other stats, same for the user the number of moves will be fixed but the choice will be decided by the user to defeat the enemy. 
 
 **Level 5 Maze Navigation:** Requires optimized pathfinding where movements consume stamina and directly reduce health and certain steps can have effects that could  increase player stamina or health up to a certain percentage . 
 
