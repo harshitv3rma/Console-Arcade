@@ -1,0 +1,59 @@
+%%{init: {"themeVariables": {"edgeLabelBackground": "transparent"}}}%%
+flowchart LR
+  %% Actor (Using an icon and making the box transparent to mimic a stick figure)
+  Actor["fa:fa-user<br>Actor"]
+  style Actor fill:transparent,stroke:transparent
+
+  subgraph System ["Console-Arcade Game System"]
+    %% Use Cases (using stadium shapes to mimic ovals)
+    PG(["Play Game"])
+    L1(["Level 1"])
+    L1WA(["Handle Wrong Answer"])
+    L1CA(["Handle Correct Answer"])
+    L2(["Level 2"])
+    L2WA(["Handle Wrong Answer"])
+    L2CA(["Handle Correct Answer"])
+    L3(["Level 3"])
+    L3WA(["Handle Wrong Answer"])
+    L3CA(["Handle Correct Answer"])
+    L4(["Level 4"])
+    L4WA(["Handle Wrong Answer"])
+    L4CA(["Handle Correct Answer"])
+    L5(["Level 5"])
+    L5WA(["Handle Wrong Answer"])
+    L5CA(["Handle Correct Answer"])
+    QG(["Quit Game"])
+  end
+
+  %% Actor to Play Game
+  Actor --- PG
+
+  %% Play Game to Levels
+  PG --- L1
+  PG --- L2
+  PG --- L3
+  PG --- L4
+  PG --- L5
+
+  %% Level Extensions 
+  L1 -- "<< extend>>" --> L1WA
+  L1 -- "<< extend>>" --> L1CA
+  
+  L2 -- "<< extend>>" --> L2WA
+  L2 -- "<< extend>>" --> L2CA
+  
+  L3 -- "<< extend>>" --> L3WA
+  L3 -- "<< extend>>" --> L3CA
+  
+  L4 -- "<< extend>>" --> L4WA
+  L4 -- "<< extend>>" --> L4CA
+  
+  L5 -- "<< extend>>" --> L5WA
+  L5 -- "<< extend>>" --> L5CA
+
+  %% Includes pointing to Quit Game
+  L1WA -- "<< include >>" --- QG
+  L1CA -- "<< include >>" --- QG
+  L3WA -- "<< include >>" --- QG
+  L3CA -- "<< include >>" --- QG
+  PG -- "<< include >>" --- QG
