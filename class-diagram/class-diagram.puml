@@ -1,0 +1,69 @@
+@startuml
+title 3. DOMAIN CLASS DIAGRAM
+
+skinparam classAttributeIconSize 0
+
+class Player {
+  - name: String
+  - health: int
+}
+
+class Game {
+  - score: int
+  - statistics: String
+  - currentIndex: int
+  + startGame(): void
+  + endGame(): void
+  + playerDetails(): void
+}
+
+class Level {
+  - levelNumber: int
+  - attempt: int
+  - goal: String
+  + nextLevel(): void
+  + skipLevel(): void
+  + playLevel(): void
+  + checkStats(): void
+  + resetLevel(): void
+}
+
+class Level1 {
+}
+
+class Level2 {
+}
+
+class Level3 {
+  - boardLength: int
+  - boardWidth: int
+  - targetFood: int
+  - snakeLength: int
+  - snakeDirection: String
+  - snakeDeque: List<Tuple>
+  - foodPosition: Tuple
+  - growthPending: boolean
+  + moveSnake(): void
+  + spawnFood(): void
+  + checkCollision(): boolean
+}
+
+class Level4 {
+}
+
+class Level5 {
+}
+
+' Inheritance
+Level <|-- Level1
+Level <|-- Level2
+Level <|-- Level3
+Level <|-- Level4
+Level <|-- Level5
+
+' Associations
+Player "1" --> "1..*" Level : plays >
+Game "1" *-- "1..*" Level : contains >
+Player "1" --> "1" Game : interacts with >
+
+@enduml
