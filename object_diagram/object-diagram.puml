@@ -1,0 +1,43 @@
+@startuml
+title 4. OBJECT DIAGRAM - Player Playing Level 3 (Snake Game)
+
+object "<u>player1 : Player</u>" as player1 {
+  name = "Pranshu"
+  health = 75
+}
+
+object "<u>game1 : Game</u>" as game1 {
+  score = 6
+  statistics = "Level 3 in progress"
+  currentIndex = 3
+}
+
+object "<u>level3 : Level3</u>" as level3 {
+  levelNumber = 3
+  attempt = 1
+  goal = "Eat 10 foods"
+  boardLength = 15
+  boardWidth = 15
+  targetFood = 10
+  snakeLength = 7
+  snakeDirection = "Right"
+  snakeDeque = [(6,8),(5,8),(4,8),(3,8),(2,8),(1,8),(0,8)]
+  foodPosition = (5,2)
+  growthPending = false
+}
+
+' Links matching the associations in the Class Diagram
+player1 --> level3 : plays >
+game1 *-- level3 : contains >
+player1 --> game1 : interacts with >
+
+legend bottom
+  <b>Scenario :</b>
+  * Player Pranshu is currently playing Level 3.
+  * He has a score of 6 and needs 4 more to hit the target of 10.
+  * His current health is 75.
+  * The snake length is 7. It is moving Right. Head is at (6,8) and tail is at (0,8).
+  * Current food is at position (5,2).
+  * Growth is not pending.
+endlegend
+@enduml
