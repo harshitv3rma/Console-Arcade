@@ -116,7 +116,7 @@ public:
             {
                 if (c == '#')
                 {
-                    cout << "█";
+                    cout << "#";
                 }
                 else
                 {
